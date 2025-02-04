@@ -228,6 +228,9 @@ p{
     .navbar-nav {
       flex-direction: column;
       text-align: center;
+      width: 100%;
+      margin: 0;
+      padding: 0;
     }
   
     .navbar-nav .nav-item {
@@ -250,6 +253,10 @@ p{
       left: 5%;
       right: 5%;
     }
+
+    .carrusel{
+      display: none;
+    }
   
     .video-cont {
       width: 90%;
@@ -268,7 +275,13 @@ p{
     .opinion2{
       display: none;
     }
-  }
+    /*footer*/
+
+ .card-img-body{
+  display: none;
+ }
+}
+  
 
   /**/
   
