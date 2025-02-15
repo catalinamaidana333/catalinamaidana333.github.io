@@ -1,0 +1,100 @@
+@import "variables";
+
+.contenedor2{
+    width: 100%;
+    img{
+        width: 100%;
+        height: 27rem;
+        object-fit: cover;
+    }
+}
+.presentacion-c{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 3rem;
+    margin-left: 3rem;
+    max-height: 35rem;
+
+}
+.intro-base{
+    background-color: $extracolor; 
+    border-radius: 5px; 
+    width: 40vw; 
+    padding: 1rem;
+}
+.intro-crema{
+    @extend .intro-base;
+    text-align: start;
+    height: 30rem;
+    font-size: x-large
+}
+.intro2-crema{
+    @extend .intro-base;
+    text-align: end;
+    height: 20rem;
+}
+.intro-mobile{
+    display: none !important;
+}
+@mixin cremas-clasf ($columnas){
+    display: grid;
+    grid-template-columns: $columnas;
+    gap: 2rem;
+    justify-items: center;
+}
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 95%;
+    .clasf-crema{
+        border-radius: 12px;
+        margin: 10px;
+        text-align: start; 
+        background-color: $extracolor;
+        width: 90%; 
+        max-width: 1320px;
+        h3{
+            color: $fontcolor;
+        }
+        .img-clasf{
+            @include cremas-clasf(repeat(3, 1fr));
+            img{
+                width: 20rem;
+                height: 20rem;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: $mobile){
+    .intro-mobile{
+        display: block;
+        margin: 15px;
+    }
+    .intro-crema, .intro2-crema{
+        display: none;
+    }
+    .img-clasf{
+        @include cremas-clasf(repeat(2, 1fr))
+        
+        }
+    .img-dekstop{
+        display: none !important;
+    }    
+
+}
+@media (max-width:$tablet ){
+    .intro-crema{
+        display: block;
+        margin: 8rem;
+    }
+    .intro2-crema{
+        display: none;
+    }
+}

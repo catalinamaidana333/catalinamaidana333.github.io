@@ -1,0 +1,63 @@
+@import "variables";
+@import "index";
+@import "cremas";
+@import "cabello";
+@import "calendario";
+
+
+body{
+    background-color: rgb(252, 220, 226);
+    color: rgb(43, 25, 35);
+    font-family: "Italiana", serif;
+    font-weight: 800;
+    font-style: normal;
+
+    footer{
+        background-color: rgb(255, 176, 157);
+        height: auto;
+        margin-top: 5rem;
+        padding: 2rem 1rem;
+        
+    }
+    .card-footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        .card{
+            width: 90%; 
+            max-width: 300px; 
+            height: auto;  
+            background-color: rgb(255, 176, 157); 
+            text-align: center;
+            .card-img{
+                background-color: $colorcard;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .skala-suscribe{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 10px;
+        text-align: center;
+        margin-top: 1rem;
+        .skala-logo2{
+            width: 12.5vw;
+            height: auto;
+          }
+          .skala-form1{
+            text-align: end;
+            }
+
+      }
+  
+
+}
+.skala-logo{
+    width: 12.5vw;
+    height: auto;
+}
