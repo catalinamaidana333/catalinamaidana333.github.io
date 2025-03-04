@@ -8,6 +8,9 @@
         object-fit: cover;
     }
 }
+.contenedor2-mob{
+    display: none;
+}
 .presentacion-c{
     display: flex;
     align-items: center;
@@ -65,6 +68,10 @@
                 width: 20rem;
                 height: 20rem;
                 object-fit: cover;
+                transition: transform 0.3s ease-in-out;
+                &:hover{
+                    transform: scale(1.1);
+                }
             }
         }
     }
@@ -73,28 +80,88 @@
 
 
 @media (max-width: $mobile){
+    .contenedor2{
+        display: none !important;
+    }
+    .contenedor2-mob{
+        display: block !important;
+        position: relative;
+        background-color: $extracolor2;
+        padding: 100px 10px;
+        text-align: center;
+        clip-path: ellipse(90% 100% at 70% 100%);
+        margin-bottom: 4rem;
+        z-index: 1;
+        .cremas-cont{
+           
+            h3{
+                font-size: 20px;
+                font-weight: bold;
+                color: $extracolor;
+                position: absolute;
+                top: 65%;
+                left: 30%;
+                z-index: 3;
+                text-align: end;
+                padding: 10px;
+            }
+            img{
+                width: 13rem;
+                height: 10rem;
+                position: absolute;
+                top: 20%;
+                left: 3%;
+                z-index: 2;
+                transform: translate(-20%, -3%);
+            }
+            
+        }
+    }
     .intro-mobile{
-        display: block;
+        display: block !important;
         margin: 15px;
     }
     .intro-crema, .intro2-crema{
-        display: none;
+        display: none !important;
     }
     .img-clasf{
-        @include cremas-clasf(repeat(2, 1fr))
+        @include cremas-clasf(repeat(2, 1fr));
+        img{
+            width: 2rem !important;
+            height: 4rem !important;
+        }
         
         }
-    .img-dekstop{
-        display: none !important;
-    }    
+    
+    
+    .clasf-crema{
+        border-radius: 12px;
+        width: 90%;
+        height: 10rem;
 
 }
-@media (max-width:$tablet ){
+}
+@media (max-width:$tablet){
+
     .intro-crema{
         display: block;
-        margin: 8rem;
+        margin: 2rem;
+        width: 90%;
+        height: 18rem;
+        p{
+            font-size: 20px;
+        }
     }
     .intro2-crema{
         display: none;
     }
+    .img-clasf{
+        @include cremas-clasf(repeat(3, 1fr));
+        img{
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover;
+        }
+    }
+    
 }
