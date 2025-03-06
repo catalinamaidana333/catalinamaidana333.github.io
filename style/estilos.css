@@ -518,6 +518,28 @@ body {
   padding: 5px;
 }
 
+.contenedor-cuidado {
+  display: grid;
+  gap: 20px;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.contenedor-cuidado .item-cont {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(203, 255, 154);
+  padding: 10px;
+  margin: 15px;
+}
+.contenedor-cuidado .item-cont img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+}
+.contenedor-cuidado .item-cont .texto-cont {
+  padding-left: 10px;
+}
+
 body {
   background-color: rgb(255, 255, 255);
   color: rgb(43, 25, 35);
