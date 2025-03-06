@@ -518,6 +518,25 @@ body {
   padding: 5px;
 }
 
+@media (max-width: 768px) {
+  .calendario-capilar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  .calendario-capilar .calendario-titulo h2 {
+    font-size: 4rem;
+    padding: 1rem !important;
+  }
+  .calendario-capilar .calendario-titulo p {
+    padding: 1rem !important;
+  }
+}
 .contenedor-cuidado {
   display: grid;
   gap: 20px;
@@ -540,6 +559,24 @@ body {
   padding-left: 10px;
 }
 
+@media (max-width: 768px) {
+  .contenedor-cuidado {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .contenedor-cuidado .item-cont {
+    padding: 8px;
+    margin: 12px;
+  }
+  .contenedor-cuidado .item-cont img {
+    width: 5rem;
+    height: 7rem;
+  }
+  .contenedor-cuidado .item-cont .texto-cont {
+    padding: 5px;
+  }
+}
 body {
   background-color: rgb(255, 255, 255);
   color: rgb(43, 25, 35);

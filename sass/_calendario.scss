@@ -61,3 +61,24 @@
         }
     }
 }
+@media (max-width: $mobile){
+    .calendario-capilar{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        margin-right: 10px;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        .calendario-titulo{
+            h2{
+                font-size: 4rem;
+                padding: 1rem !important;
+            }
+            p{
+                padding: 1rem !important;
+            }
+        }
+    }}
